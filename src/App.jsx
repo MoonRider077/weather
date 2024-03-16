@@ -20,28 +20,28 @@ function App() {
         } else {
           switch (json.weather[0].main) {
             case 'Clear':
-              setWeatherData({ ...json, imageSrc: './src/assets/images/clear.png' });
+              setWeatherData({ ...json, imageSrc: '/images/clear.png' });
               break;
 
             case 'Rain':
-              setWeatherData({ ...json, imageSrc: './src/assets/images/rain.png' });
+              setWeatherData({ ...json, imageSrc: '/images/rain.png' });
               break;
 
             case 'Snow':
-              setWeatherData({ ...json, imageSrc: './src/assets/images/snow.png' });
+              setWeatherData({ ...json, imageSrc: '/images/snow.png' });
               break;
 
             case 'Clouds':
-              setWeatherData({ ...json, imageSrc: './src/assets/images/cloud.png' });
+              setWeatherData({ ...json, imageSrc: '/images/cloud.png' });
               break;
 
             case 'Mist':
             case 'Haze':
-              setWeatherData({ ...json, imageSrc: './src/assets/images/mist.png' });
+              setWeatherData({ ...json, imageSrc: '/images/mist.png' });
               break;
 
             default:
-              setWeatherData({ ...json, imageSrc: './src/assets/images/cloud.png' });
+              setWeatherData({ ...json, imageSrc: '/images/cloud.png' });
           }
           setError(false);
         }
@@ -113,7 +113,7 @@ function App() {
       {error && (
         <div className="not__found active">
           <div className="box">
-            <img src="./src/assets/images/404.png" alt="Not found" /> 
+            <img src="/images/404.png" alt="Not found" /> 
             <p>Oops! Location not found!</p>
           </div>
         </div>
